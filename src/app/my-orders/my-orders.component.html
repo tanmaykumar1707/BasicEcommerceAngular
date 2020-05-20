@@ -1,0 +1,18 @@
+
+<h2>My Orders</h2>
+<table class="table" *ngIf="list$ | async as list">
+    <thead>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Date Placed</th>
+    </thead>
+    <tbody > 
+        <tr *ngFor="let li of list">
+            <td>{{li.shipping.name }}</td>
+            <td>{{li.shipping['address'] }}</td>
+           <td>{{li.datePlaced | date}}</td>
+         
+           <td></td> 
+        </tr>
+    </tbody>
+</table> 
